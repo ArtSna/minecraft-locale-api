@@ -1,0 +1,19 @@
+debug: true
+################## DATABASE ##################
+database:
+   type: 'sqlite' #[mysql, sqlite]
+   host: 'localhost:3306'
+   name: 'minecraft'
+   username: 'root'
+   password: ''
+   tables:
+      LocaleEntity: 'localeapi_data'
+##############################################
+
+# %locale% Returns the player selected locale.
+# %pluginName% Returns the name of the hooked plugin.
+# %pluginDataFolder% Returns the data folder of the hooked plugin.
+# %baseDataFolder% Returns the data folder of this plugin.
+locale_file_dir_pattern: '%pluginDataFolder%/lang/messages-%locale%.yml'
+
+fallback_locale: 'en_us'
